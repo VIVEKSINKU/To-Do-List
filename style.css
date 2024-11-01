@@ -56,3 +56,52 @@
 .inbox button:hover{
     background: rgb(212, 212, 212);
 }
+#new{
+    position: relative;
+    top:70px;
+    right: 200px;
+    height: 40px;
+    width: 100px;
+}
+#plus{
+    width: 20px;
+    height: 20px;
+   
+}
+ul li{
+    box-sizing: border-box;
+    padding: 10px 10px 100px;
+    margin: 20px;
+    background: #d6d6d6;
+    width: 240px;
+    border-radius: 10px;
+    position: absolute;
+    left:400px;
+    bottom: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+.addbar{
+    position: relative;
+    left:1000px;
+    bottom: 638px;
+}
+#AddBar{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none; 
+}
+/*--#Add{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    right:3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#Add:hover{
+    background: rgb(212, 212, 212);
+} --*/
