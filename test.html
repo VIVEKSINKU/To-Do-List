@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaky Effect with Red Outline</title>
+  <style>
+    .box {
+      display: inline-block;
+      padding: 20px;
+      font-size: 1.5rem;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+
+    .shake {
+      animation: shake 0.5s ease-in-out;
+      border-color: red; /* Outline turns red */
+    }
+
+    @keyframes shake {
+      0% { transform: translate(0px, 0px); }
+      25% { transform: translate(-3px, 3px); }
+      50% { transform: translate(3px, -3px); }
+      75% { transform: translate(-3px, -3px); }
+      100% { transform: translate(0px, 0px); }
+    }
+  </style>
+</head>
+<body>
+  <div id="box" class="box">Click Me to Shake!</div>
+
+  <script>
+    const box = document.getElementById('box');
+
+    box.addEventListener('click', () => {
+      box.classList.add('shake');
+
+      // Remove the class after the animation ends
+      box.addEventListener('animationend', () => {
+        box.classList.remove('shake');
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>

@@ -2,7 +2,10 @@ const inputBox = document.getElementById("input-box");
 const listContainer= document.getElementById("list-container");
 function addTask(){
     if(inputBox.value === ''){
-        alert("You must write something!");
+        inputBox.classList.add('shake');
+        inputBox.addEventListener('animationend',() => {
+            inputBox.classList.remove('shake');
+        }, {once:true});
     }
     else{
         let li = document.createElement("li");
